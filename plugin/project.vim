@@ -56,7 +56,7 @@ fun! g:DetectProject()
     endfor
 
     " check the environment variable, for single-project zones
-    if exists("$VIM_PROJECT")
+    if exists("$VIM_PROJECT") && $VIM_PROJECT != ""
         call g:SetProject($VIM_PROJECT)
         return b:current_project
     endif
